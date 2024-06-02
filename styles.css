@@ -48,6 +48,28 @@ body {
   margin-bottom: 15px;
 }
 
+.experiences {
+  margin-right: 10px;
+}
+
+.experiences__header {
+  margin-bottom: 15px;
+}
+
+.experiences__company-header {
+  margin-bottom: 15px;
+}
+
+.experiences__company-project-role {
+  margin-bottom: 15px;
+}
+
+.experiences__company-project-responsibilities{
+  margin: 0;
+  margin-left: 15px;
+  padding: 0;
+}
+
 @media screen and (max-width: 576px) {
   .main-info,
   .contact_info_container {
@@ -165,4 +187,16 @@ body {
 .skills__text {
   color: var(--secondary-text-color);
   text-align: justify;
+}
+
+.additional-info__education {
+  margin-bottom: 15px;
+}
+
+.additional-info__education-header {
+  margin-bottom: 10px;
+}
+
+.additional-info__education-university {
+  margin-bottom: 10px;
 }
