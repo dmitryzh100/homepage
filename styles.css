@@ -48,6 +48,28 @@ body {
   margin-bottom: 15px;
 }
 
+.experiences {
+  margin-right: 10px;
+}
+
+.experiences__header {
+  margin-bottom: 15px;
+}
+
+.experiences__company-header {
+  margin-bottom: 15px;
+}
+
+.experiences__company-project-role {
+  margin-bottom: 15px;
+}
+
+.experiences__company-project-responsibilities{
+  margin: 0;
+  margin-left: 15px;
+  padding: 0;
+}
+
 @media screen and (max-width: 576px) {
   .main-info,
   .contact_info_container {
