@@ -188,3 +188,15 @@ body {
   color: var(--secondary-text-color);
   text-align: justify;
 }
+
+.additional-info__education {
+  margin-bottom: 15px;
+}
+
+.additional-info__education-header {
+  margin-bottom: 10px;
+}
+
+.additional-info__education-university {
+  margin-bottom: 10px;
+}
