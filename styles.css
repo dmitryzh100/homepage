@@ -64,7 +64,8 @@ body {
   margin-bottom: 15px;
 }
 
-.experiences__company-project-responsibilities{
+.experiences__company-project-responsibilities,
+.portfolio__projects {
   margin: 0;
   margin-left: 15px;
   padding: 0;
@@ -90,6 +91,7 @@ body {
 }
 
 .contact-info__header,
+.portfolio__header,
 .contact-info__sub-header {
   text-align: center;
 }
@@ -199,4 +201,9 @@ body {
 
 .additional-info__education-university {
   margin-bottom: 10px;
+}
+
+.project__github-link,
+.project__demo-link {
+  text-decoration: none;
 }
