@@ -1,20 +1,25 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
         <title>Résumé</title>
     </head>
     <body>
+        <!--
+            Thanks for reading the source — you're exactly the kind of curious
+            person I'd want on a team. There's a classic cheat code hidden here:
+            ↑ ↑ ↓ ↓ ← → ← → B A. Open the console for a hello, too. — Dmytro
+        -->
         <main>
             <div class="resume">
                 <div class="container">
                     <div class="resume__block">
                         <h1 class="contact-info__header">Dmytro Zhyltsov</h1>
-                        <h3 class="contact-info__sub-header">
+                        <h2 class="contact-info__sub-header">
                             Full-Stack Developer
-                        </h3>
+                        </h2>
 
                         <div class="contact_info_container fh">
                             <div
@@ -24,7 +29,7 @@
                                     class="contact-info__avatar"
                                     src="assets/avatar.png"
                                     alt="Avatar"
-                                />
+                                >
                             </div>
 
                             <div class="contact-info__block">
@@ -428,7 +433,111 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="container">
+                    <div class="resume__block">
+                        <div class="beyond">
+                            <h3 class="beyond__header">Beyond the Code</h3>
+                            <p class="beyond__subtitle">
+                                Because
+                                <code>git commit -m "life"</code> needs more
+                                than work.
+                            </p>
+                            <ul class="beyond__grid">
+                                <li class="beyond__card">
+                                    <span
+                                        class="beyond__card-icon"
+                                        aria-hidden="true"
+                                        >🎸</span
+                                    >
+                                    <h4 class="beyond__card-title">
+                                        Guitar &amp; Music
+                                    </h4>
+                                    <p class="beyond__card-text">
+                                        Six strings, zero merge conflicts — the
+                                        one place where finger placement matters
+                                        more than function placement.
+                                    </p>
+                                </li>
+                                <li class="beyond__card">
+                                    <span
+                                        class="beyond__card-icon"
+                                        aria-hidden="true"
+                                        >🎮</span
+                                    >
+                                    <h4 class="beyond__card-title">Gaming</h4>
+                                    <p class="beyond__card-text">
+                                        Sharpening reflexes and strategy one
+                                        match at a time — the same energy I
+                                        bring to hunting down a stubborn bug.
+                                    </p>
+                                </li>
+                                <li class="beyond__card">
+                                    <span
+                                        class="beyond__card-icon"
+                                        aria-hidden="true"
+                                        >☕</span
+                                    >
+                                    <h4 class="beyond__card-title">Coffee</h4>
+                                    <p class="beyond__card-text">
+                                        My true runtime environment.
+                                        <code>while (tired) coffee++;</code> —
+                                        fueling clean commits since day one.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="resume__block resume__block--last">
+                        <div class="fun">
+                            <h3 class="fun__header">Compiler of Bad Jokes</h3>
+                            <p class="fun__text">
+                                Side effects may include groans and involuntary
+                                eye-rolling. Press at your own risk.
+                            </p>
+                            <p
+                                class="fun__joke"
+                                id="joke"
+                                role="status"
+                                aria-live="polite"
+                            >
+                                Why do programmers prefer dark mode? Because
+                                light attracts bugs.
+                            </p>
+                            <button
+                                class="fun__button"
+                                type="button"
+                                id="joke-button"
+                            >
+                                Tell me another →
+                            </button>
+                            <p class="fun__hint">
+                                Psst… there's a classic cheat code hidden on
+                                this page.
+                                <span class="fun__hint-keys" aria-hidden="true"
+                                    >↑ ↑ ↓ ↓ ← → ← → B A</span
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
+
+        <div
+            class="easter-egg-toast"
+            id="easter-toast"
+            role="status"
+            aria-live="assertive"
+            hidden
+        >
+            🎉 Konami code unlocked! You clearly read the fine print. Let's build
+            something cool together.
+        </div>
+
+        <script src="script.js" defer></script>
     </body>
 </html>
