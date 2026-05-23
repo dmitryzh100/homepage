@@ -1,0 +1,482 @@
+/* stylelint-disable selector-class-pattern -- this project uses BEM (block__element--modifier) plus a couple of legacy snake_case names, which are intentionally not kebab-case. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    --primary-text-color: #181820;
+    --secondary-text-color: #5c5c62;
+    --durability-text-color: #6a737d9c;
+    --icon-color: #6a737d;
+    --border-color: #ff9a0045;
+    --text-decoration-color: #ff9a00;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 900px;
+}
+
+.fh {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resume {
+    margin: 50px auto;
+    border: 1px solid #f5f5f5;
+    box-shadow: 1px 1px 7px 7px #f5f5f5;
+    padding: 30px 0;
+    max-width: 900px;
+}
+
+.resume__block {
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+@media screen and (width <= 576px) {
+    .main-info,
+    .contact_info_container {
+        flex-direction: column;
+    }
+
+    .contact_info_container {
+        align-items: center;
+    }
+
+    .contact-info__block:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .experiences {
+        margin-right: 0;
+    }
+}
+
+.contact-info__header,
+.contact-info__sub-header {
+  text-align: center;
+}
+
+.contact-info__header {
+  color: var(--primary-text-color);
+  margin-bottom: 15px;
+  text-decoration-color: var(--text-decoration-color);
+  text-decoration-line: underline;
+}
+
+.contact-info__sub-header {
+  color: var(--secondary-text-color);
+  margin-bottom: 30px;
+  font-size: 1.17rem;
+}
+
+.contact-info__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-info__block--center {
+  justify-content: center;
+}
+
+.contact-info__item {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+}
+
+.contact-info__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contact-info__item-icon-wrapper {
+  margin-right: 10px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info__item-icon path {
+  fill: var(--icon-color);
+}
+
+.contact-info__item-icon {
+  height: 1.1428rem;
+  vertical-align: text-bottom;
+}
+
+.contact-info__avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid;
+  border-color: var(--text-decoration-color);
+}
+
+.intro {
+  display: flex;
+  justify-content: start;
+}
+
+.intro__icon-wrapper {
+  margin-right: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro__icon {
+  height: 1.1428rem;
+  vertical-align: text-bottom;
+}
+
+.intro__icon path {
+  fill: var(--text-decoration-color);
+}
+
+.intro_text {
+  color: var(--secondary-text-color);
+  text-align: justify;
+}
+
+.skills__header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skills__text {
+  color: var(--secondary-text-color);
+  text-align: justify;
+}
+
+.experiences {
+  flex: 1 1 60%;
+  margin-right: 50px;
+}
+
+.experiences__header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.experiences__company-header-durability {
+  color: var(--durability-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.experiences__company-header-name {
+  color: var(--primary-text-color);
+  text-decoration-color: var(--text-decoration-color);
+  text-decoration-line: underline;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.experiences__company-project {
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+
+.experiences__company-project-role {
+  color: var(--durability-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.experiences__company-project-name {
+  color: var(--primary-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.experiences__company-project-responsibilities {
+  color: var(--secondary-text-color);
+  padding-left: 20px;
+}
+
+.additional-info {
+  flex: 1 1 40%;
+}
+
+.additional-info__education {
+  margin-bottom: 20px;
+}
+
+.additional-info__education-header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.additional-info__education-university-durability {
+  color: var(--durability-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.additional-info__education-university-speciality {
+  color: var(--primary-text-color);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.additional-info__education-university-name {
+  color: var(--secondary-text-color);
+}
+
+.additional-info__languages {
+  margin-bottom: 20px;
+}
+
+.additional-info__languages-header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.additional-info__languages-item {
+  color: var(--secondary-text-color);
+}
+
+.resume__block--last {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  background: #f5f5f5;
+  color: var(--primary-text-color);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.beyond__header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.beyond__subtitle {
+  color: var(--durability-text-color);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.beyond__grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.beyond__card {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 22px 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.beyond__card:hover,
+.beyond__card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px #ff9a0022;
+  border-color: var(--text-decoration-color);
+}
+
+.beyond__card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 14px;
+  font-size: 26px;
+  border-radius: 50%;
+  background: var(--border-color);
+}
+
+.beyond__card-title {
+  color: var(--primary-text-color);
+  margin-bottom: 8px;
+}
+
+.beyond__card-text {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+}
+
+.fun__header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.fun__text {
+  color: var(--durability-text-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fun__joke {
+  color: var(--primary-text-color);
+  text-align: center;
+  font-size: 18px;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.fun__button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #fff;
+  background: var(--text-decoration-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.fun__button:hover {
+  filter: brightness(1.08);
+}
+
+.fun__button:active {
+  transform: scale(0.96);
+}
+
+.fun__button:focus-visible {
+  outline: 3px solid var(--text-decoration-color);
+  outline-offset: 3px;
+}
+
+.fun__hint {
+  color: var(--durability-text-color);
+  text-align: center;
+  font-size: 13px;
+  margin-top: 22px;
+}
+
+.fun__hint-keys {
+  display: inline-block;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.easter-egg-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%) translateY(20px);
+  max-width: 90%;
+  background: var(--primary-text-color);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px #0003;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.easter-egg-toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@keyframes konami-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes konami-hue {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes avatar-wiggle {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-12deg);
+  }
+
+  75% {
+    transform: rotate(12deg);
+  }
+}
+
+.konami-mode .resume {
+  animation: konami-hue 6s linear infinite;
+}
+
+.konami-mode .contact-info__avatar {
+  animation: konami-spin 1.2s linear infinite;
+}
+
+.contact-info__avatar--wiggle {
+  animation: avatar-wiggle 0.5s ease;
+}
+
+@media screen and (width <= 576px) {
+  .beyond__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beyond__card,
+  .fun__button,
+  .easter-egg-toast {
+    transition: none;
+  }
+
+  .konami-mode .resume,
+  .konami-mode .contact-info__avatar,
+  .contact-info__avatar--wiggle {
+    animation: none;
+  }
+}
