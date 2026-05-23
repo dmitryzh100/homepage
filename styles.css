@@ -1,3 +1,5 @@
+/* stylelint-disable selector-class-pattern -- this project uses BEM (block__element--modifier) plus a couple of legacy snake_case names, which are intentionally not kebab-case. */
+
 * {
     margin: 0;
     padding: 0;
@@ -48,8 +50,7 @@ body {
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
-
+@media screen and (width <= 576px) {
     .main-info,
     .contact_info_container {
         flex-direction: column;
@@ -83,6 +84,7 @@ body {
 .contact-info__sub-header {
   color: var(--secondary-text-color);
   margin-bottom: 30px;
+  font-size: 1.17rem;
 }
 
 .contact-info__block {
@@ -260,4 +262,221 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+
+.resume__block--last {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  background: #f5f5f5;
+  color: var(--primary-text-color);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.beyond__header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.beyond__subtitle {
+  color: var(--durability-text-color);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.beyond__grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.beyond__card {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 22px 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.beyond__card:hover,
+.beyond__card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px #ff9a0022;
+  border-color: var(--text-decoration-color);
+}
+
+.beyond__card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 14px;
+  font-size: 26px;
+  border-radius: 50%;
+  background: var(--border-color);
+}
+
+.beyond__card-title {
+  color: var(--primary-text-color);
+  margin-bottom: 8px;
+}
+
+.beyond__card-text {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+}
+
+.fun__header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.fun__text {
+  color: var(--durability-text-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fun__joke {
+  color: var(--primary-text-color);
+  text-align: center;
+  font-size: 18px;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.fun__button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #fff;
+  background: var(--text-decoration-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.fun__button:hover {
+  filter: brightness(1.08);
+}
+
+.fun__button:active {
+  transform: scale(0.96);
+}
+
+.fun__button:focus-visible {
+  outline: 3px solid var(--text-decoration-color);
+  outline-offset: 3px;
+}
+
+.fun__hint {
+  color: var(--durability-text-color);
+  text-align: center;
+  font-size: 13px;
+  margin-top: 22px;
+}
+
+.fun__hint-keys {
+  display: inline-block;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.easter-egg-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%) translateY(20px);
+  max-width: 90%;
+  background: var(--primary-text-color);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px #0003;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.easter-egg-toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@keyframes konami-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes konami-hue {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes avatar-wiggle {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-12deg);
+  }
+
+  75% {
+    transform: rotate(12deg);
+  }
+}
+
+.konami-mode .resume {
+  animation: konami-hue 6s linear infinite;
+}
+
+.konami-mode .contact-info__avatar {
+  animation: konami-spin 1.2s linear infinite;
+}
+
+.contact-info__avatar--wiggle {
+  animation: avatar-wiggle 0.5s ease;
+}
+
+@media screen and (width <= 576px) {
+  .beyond__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beyond__card,
+  .fun__button,
+  .easter-egg-toast {
+    transition: none;
+  }
+
+  .konami-mode .resume,
+  .konami-mode .contact-info__avatar,
+  .contact-info__avatar--wiggle {
+    animation: none;
+  }
 }
